@@ -44,7 +44,7 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{middle_name_ca}")
     passwords.append(f"{middle_name_lo}")
     passwords.append(f"{middle_name_ti}")
-    
+                               
     passwords.append(f"{last_name}")
     passwords.append(f"{last_name_ca}")
     passwords.append(f"{last_name_lo}")
@@ -61,8 +61,7 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{last_name_ca}{symbol_and}")
     passwords.append(f"{last_name_lo}{symbol_and}")
     passwords.append(f"{last_name_ti}{symbol_and}")
-    
-    
+                               
     full_name_1 = f"{first_name}{middle_name}{last_name}" if middle_name else f"{first_name}{last_name}"
     passwords.append(f"{full_name_1}")
     passwords.append(f"{full_name_1.upper()}")
