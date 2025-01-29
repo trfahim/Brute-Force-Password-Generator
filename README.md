@@ -1,7 +1,7 @@
 # 🤖 Bruteforce Password Generator 🤖
 ## Description
 - Bruteforce Password Generator is a Python script that generates a customized password list based on user-provided names. It creates multiple variations of the names by incorporating symbols and numbers, making it useful for penetration testing and security research.
--  ## Features
+## Features
 - Generates a comprehensive password list based on first, middle, and last names.
 
 - Includes different case variations (uppercase, lowercase, title case).
