@@ -21,6 +21,8 @@
 - cd Brute-Force-Password-Generator
 - pip install colorama
 - pip install pyfiglet
+-  pip install random
+-  pip install string
 - python brute_force_generator.py
 ## Disclaimer
   - This tool is intended for educational and ethical purposes only. Do not use it for any illegal activities. The authors are not responsible for any misuse of this tool.
