@@ -1,6 +1,6 @@
 from colorama import Fore
 import pyfiglet,os
-
+import random,string
 
 def banner():
     os.system("cls")
@@ -189,8 +189,12 @@ def main():
     last_name_ca = last_name.upper()
     last_name_lo = last_name.lower()
     last_name_ti = last_name.title()
-
-    file_name = (f"Brutefoce_Passwordlist_{first_name.upper()}.txt")
+    
+    case1 = random.choice(string.ascii_letters)
+    case2 = random.choice(string.digits)
+    random_case = (f"{first_name}_{case1}{case2}")
+    
+    file_name = (f"Passwordlist_{random_case}.txt")
     
     password_list = generate_password_list(first_name, middle_name, last_name,
                                            first_name_ca, 
