@@ -18,7 +18,7 @@
 - Pyfiglet: For generating ASCII art banners.
 ## Installation
 ### Clone the Repository:
-- git clone https://github.com/your-username/bruteforce-password-generator.git
+- git clone https://github.com/trfahim/Brute-Force-Password-Generator.git
 - cd bruteforce-password-generator
 - pip install colorama
 - pip install pyfiglet
