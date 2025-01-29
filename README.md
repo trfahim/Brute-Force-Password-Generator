@@ -17,7 +17,6 @@
 - Colorama: For adding colored text to the terminal.
 - Pyfiglet: For generating ASCII art banners.
 ## Installation
-### Clone the Repository:
 - git clone https://github.com/trfahim/Brute-Force-Password-Generator.git
 - cd bruteforce-password-generator
 - pip install colorama
