@@ -22,7 +22,7 @@
 - cd bruteforce-password-generator
 - pip install colorama
 - pip install pyfiglet
-- python bruteforce_generator.py
+- python brute_force_generator.py
 ## Disclaimer
   - This tool is intended for educational and ethical purposes only. Do not use it for any illegal activities. The authors are not responsible for any misuse of this tool.
  
