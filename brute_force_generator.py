@@ -6,7 +6,7 @@ def banner():
     os.system("cls")
     text = pyfiglet.figlet_format("PASSWORD MAKER-1.0")
     print(Fore.RED+text)
-    print("-"*50)
+    print("-"*60)
 
 def generate_password_list(first_name, middle_name, last_name,
                            first_name_ca, 
@@ -18,6 +18,7 @@ def generate_password_list(first_name, middle_name, last_name,
                            last_name_ca,
                            last_name_lo,
                            last_name_ti):
+    
     passwords = []
     symbol_at = ("@")
     symbol_hash = ("#")
@@ -44,7 +45,7 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{middle_name_ca}")
     passwords.append(f"{middle_name_lo}")
     passwords.append(f"{middle_name_ti}")
-                               
+    
     passwords.append(f"{last_name}")
     passwords.append(f"{last_name_ca}")
     passwords.append(f"{last_name_lo}")
@@ -61,7 +62,7 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{last_name_ca}{symbol_and}")
     passwords.append(f"{last_name_lo}{symbol_and}")
     passwords.append(f"{last_name_ti}{symbol_and}")
-                               
+    
     full_name_1 = f"{first_name}{middle_name}{last_name}" if middle_name else f"{first_name}{last_name}"
     passwords.append(f"{full_name_1}")
     passwords.append(f"{full_name_1.upper()}")
@@ -75,7 +76,6 @@ def generate_password_list(first_name, middle_name, last_name,
 
     for num in range(100001): 
         digit = str(num)  
-        
         passwords.append(f"{first_name}{digit}")
         passwords.append(f"{first_name_ca}{digit}")
         passwords.append(f"{first_name_lo}{digit}")
@@ -124,6 +124,34 @@ def generate_password_list(first_name, middle_name, last_name,
             passwords.append(f"{middle_name_lo}{symbol_and}{digit}")
             passwords.append(f"{middle_name_ti}{symbol_and}{digit}")
             passwords.append(f"{middle_name}{symbol_and}{digit}")
+            
+            # Symbol FirstName+MiddleName
+            passwords.append(f"{first_name}{middle_name}{symbol_at}{digit}")
+            passwords.append(f"{first_name_ca}{middle_name_ca}{symbol_at}{digit}")
+            passwords.append(f"{first_name_lo}{middle_name_lo}{symbol_at}{digit}")
+            passwords.append(f"{first_name_ti}{middle_name_ti}{symbol_at}{digit}")
+            passwords.append(f"{first_name}{middle_name}{symbol_hash}{digit}")
+            passwords.append(f"{first_name_ca}{middle_name_ca}{symbol_hash}{digit}")
+            passwords.append(f"{first_name_lo}{middle_name_lo}{symbol_hash}{digit}")
+            passwords.append(f"{first_name_ti}{middle_name_ti}{symbol_hash}{digit}")
+            passwords.append(f"{first_name}{middle_name}{symbol_and}{digit}")
+            passwords.append(f"{first_name_ca}{middle_name_ca}{symbol_and}{digit}")
+            passwords.append(f"{first_name_lo}{middle_name_lo}{symbol_and}{digit}")
+            passwords.append(f"{first_name_ti}{middle_name_ti}{symbol_and}{digit}")
+            
+            #Special Symbol MiddleName+LastName
+            passwords.append(f"{middle_name}{last_name}{symbol_at}{digit}")
+            passwords.append(f"{middle_name_ca}{last_name_ca}{symbol_at}{digit}")
+            passwords.append(f"{middle_name_lo}{last_name_lo}{symbol_at}{digit}")
+            passwords.append(f"{middle_name_ti}{last_name_ti}{symbol_at}{digit}")
+            passwords.append(f"{middle_name}{last_name}{symbol_hash}{digit}")
+            passwords.append(f"{middle_name_ca}{last_name_ca}{symbol_hash}{digit}")
+            passwords.append(f"{middle_name_lo}{last_name_lo}{symbol_hash}{digit}")
+            passwords.append(f"{middle_name_ti}{last_name_ti}{symbol_hash}{digit}")
+            passwords.append(f"{middle_name}{last_name}{symbol_and}{digit}")
+            passwords.append(f"{middle_name_ca}{last_name_ca}{symbol_and}{digit}")
+            passwords.append(f"{middle_name_lo}{last_name_lo}{symbol_and}{digit}")
+            passwords.append(f"{middle_name_ti}{last_name_ti}{symbol_and}{digit}")
         
         #Symbol_lastname
         # symbol_at = ("@")
@@ -163,7 +191,35 @@ def generate_password_list(first_name, middle_name, last_name,
         
         full_name_cap = f"{first_name.capitalize()}{middle_name.capitalize()}{last_name.capitalize()}" if middle_name else f"{first_name.capitalize()}{last_name.capitalize()}"
         passwords.append(f"{full_name_cap}{digit}")
-    
+        
+        # Special Symbol FastName+LastName
+        passwords.append(f"{first_name}{last_name}{symbol_at}{digit}")
+        passwords.append(f"{first_name_ca}{last_name_ca}{symbol_at}{digit}")
+        passwords.append(f"{first_name_lo}{last_name_lo}{symbol_at}{digit}")
+        passwords.append(f"{first_name_ti}{last_name_ti}{symbol_at}{digit}")
+        passwords.append(f"{first_name}{last_name}{symbol_hash}{digit}")
+        passwords.append(f"{first_name_ca}{last_name_ca}{symbol_hash}{digit}")
+        passwords.append(f"{first_name_lo}{last_name_lo}{symbol_hash}{digit}")
+        passwords.append(f"{first_name_ti}{last_name_ti}{symbol_hash}{digit}")
+        passwords.append(f"{first_name}{last_name}{symbol_and}{digit}")
+        passwords.append(f"{first_name_ca}{last_name_ca}{symbol_and}{digit}")
+        passwords.append(f"{first_name_lo}{last_name_lo}{symbol_and}{digit}")
+        passwords.append(f"{first_name_ti}{last_name_ti}{symbol_and}{digit}")
+        
+        # Special Symbol LastName+FirstName
+        passwords.append(f"{last_name}{first_name}{symbol_at}{digit}")
+        passwords.append(f"{last_name_ca}{first_name_ca}{symbol_at}{digit}")
+        passwords.append(f"{last_name_lo}{first_name_lo}{symbol_at}{digit}")
+        passwords.append(f"{last_name_ti}{first_name_ti}{symbol_at}{digit}")
+        passwords.append(f"{last_name}{first_name}{symbol_hash}{digit}")
+        passwords.append(f"{last_name_ca}{first_name_ca}{symbol_hash}{digit}")
+        passwords.append(f"{last_name_lo}{first_name_lo}{symbol_hash}{digit}")
+        passwords.append(f"{last_name_ti}{first_name_ti}{symbol_hash}{digit}")
+        passwords.append(f"{last_name}{first_name}{symbol_and}{digit}")
+        passwords.append(f"{last_name_ca}{first_name_ca}{symbol_and}{digit}")
+        passwords.append(f"{last_name_lo}{first_name_lo}{symbol_and}{digit}")
+        passwords.append(f"{last_name_ti}{first_name_ti}{symbol_and}{digit}")
+                         
     return passwords
 
 def save_to_file(passwords, filename="Custom_Passwordlist.txt"):
@@ -172,7 +228,7 @@ def save_to_file(passwords, filename="Custom_Passwordlist.txt"):
             file.write(password + "\n")
     banner()
     print(Fore.YELLOW+f"\nPassword list saved to {Fore.WHITE}'{filename}'\n")
-    print(Fore.RED+"-"*50)
+    print(Fore.RED+"-"*60)
 
 def main():
     banner()
@@ -192,7 +248,7 @@ def main():
     
     case1 = random.choice(string.ascii_letters)
     case2 = random.choice(string.digits)
-    random_case = (f"{first_name}_{case1}{case2}")
+    random_case = (f"{first_name.upper()}_{case1}{case2}")
     
     file_name = (f"Passwordlist_{random_case}.txt")
     
@@ -205,10 +261,10 @@ def main():
                                            middle_name_ti,
                                            last_name_ca,
                                            last_name_lo,
-                                           last_name_ti)
-                                    
-    save_to_file(password_list)
-
+                                           last_name_ti)                         
+    
+    save_to_file(password_list, file_name)
+    
 
 if __name__ == "__main__":
     main()
