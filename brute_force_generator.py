@@ -17,8 +17,7 @@ def generate_password_list(first_name, middle_name, last_name,
                            middle_name_ti,
                            last_name_ca,
                            last_name_lo,
-                           last_name_ti):
-    
+                           last_name_ti): 
     passwords = []
     symbol_at = ("@")
     symbol_hash = ("#")
@@ -45,7 +44,9 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{middle_name_ca}")
     passwords.append(f"{middle_name_lo}")
     passwords.append(f"{middle_name_ti}")
-    
+    for zero in range (21):
+        passwords.append("0"*zero)
+        
     passwords.append(f"{last_name}")
     passwords.append(f"{last_name_ca}")
     passwords.append(f"{last_name_lo}")
@@ -63,6 +64,7 @@ def generate_password_list(first_name, middle_name, last_name,
     passwords.append(f"{last_name_lo}{symbol_and}")
     passwords.append(f"{last_name_ti}{symbol_and}")
     
+    
     full_name_1 = f"{first_name}{middle_name}{last_name}" if middle_name else f"{first_name}{last_name}"
     passwords.append(f"{full_name_1}")
     passwords.append(f"{full_name_1.upper()}")
@@ -76,6 +78,7 @@ def generate_password_list(first_name, middle_name, last_name,
 
     for num in range(100001): 
         digit = str(num)  
+        
         passwords.append(f"{first_name}{digit}")
         passwords.append(f"{first_name_ca}{digit}")
         passwords.append(f"{first_name_lo}{digit}")
@@ -219,6 +222,8 @@ def generate_password_list(first_name, middle_name, last_name,
         passwords.append(f"{last_name_ca}{first_name_ca}{symbol_and}{digit}")
         passwords.append(f"{last_name_lo}{first_name_lo}{symbol_and}{digit}")
         passwords.append(f"{last_name_ti}{first_name_ti}{symbol_and}{digit}")
+        passwords.append(f"{digit}") 
+        passwords.append(f"{digit}{digit}")      
                          
     return passwords
 
@@ -261,10 +266,10 @@ def main():
                                            middle_name_ti,
                                            last_name_ca,
                                            last_name_lo,
-                                           last_name_ti)                         
+                                           last_name_ti )                           
     
     save_to_file(password_list, file_name)
-    
+
 
 if __name__ == "__main__":
     main()
